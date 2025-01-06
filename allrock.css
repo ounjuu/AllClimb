@@ -1,0 +1,54 @@
+.my_header {
+  width: 100%;
+  height: 80px;
+  background-color: red;
+}
+.navbar {
+  width: 100%;
+  height: 80px;
+}
+
+.my_main {
+  width: 100%;
+  background-color: blue;
+  min-height: 700px;
+}
+
+.my_footer {
+  width: 100%;
+  background-color: green;
+  height: 100px;
+}
+
+/* 네비게이션 로고 중앙 정렬 */
+.navbar-brand {
+  margin: 0 auto; /* 중앙 정렬 */
+}
+
+.container-fluid {
+  position: relative;
+}
+
+.navbar-brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.navbar-toggler {
+  border: none !important;
+}
+.logo {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-brand {
+    margin-left: auto;
+    margin-right: auto;
+    position: static;
+    transform: none;
+  }
+}

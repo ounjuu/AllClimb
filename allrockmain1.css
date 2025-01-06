@@ -1,0 +1,42 @@
+/* 전체 틀  */
+
+.my_header {
+  width: 100%;
+  height: 80px;
+  background-color: red;
+}
+.navbar {
+  width: 100%;
+  height: 80px;
+}
+
+.my_main {
+  width: 100%;
+  background-color: blue;
+  min-height: 700px;
+}
+
+.my_footer {
+  width: 100%;
+  background-color: green;
+  height: 100px;
+}
+
+.my_navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.allrocklogo {
+  width: 80px;
+  height: 80px;
+}
+
+.my_navbar-menu {
+  margin: 0px auto;
+}
+
+.my_navbarleft {
+  display: flex;
+  justify-content: space-between;
+}
