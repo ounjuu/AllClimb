@@ -12,7 +12,7 @@ const data = [
 ];
 
 const data2 = [
-  { image: "./image/insta_logo.png", url: "", title: "1" },
+  { image: "./image/event1.jpg", url: "", title: "1" },
   { image: "./image/insta_logo.png", url: "", title: "2" },
   { image: "./image/insta_logo.png", url: "", title: "3" },
   { image: "./image/insta_logo.png", url: "", title: "4" },

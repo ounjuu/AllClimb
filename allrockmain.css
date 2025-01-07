@@ -19,6 +19,14 @@ body {
   font-style: normal;
   font-size: 13px;
 }
+.footertext {
+  /* 한글 폰트 13size */
+  font-family: "Noto Sans KR", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 11px;
+}
 
 .my_header {
   width: 100%;
@@ -43,6 +51,10 @@ body {
   width: 100%;
   background-color: green;
   height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
 }
 
 .my_navbar {
@@ -61,7 +73,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
   padding-top: 10px;
 }
 
@@ -87,6 +98,8 @@ li {
 /* 나중에 보이게 할 리스트 */
 .my_navbar_li {
   display: none;
+
+  padding-bottom: 8px;
 }
 
 .righttoplogo {
@@ -114,6 +127,7 @@ a {
     top: 80px;
     left: 0;
     width: 100%;
+    padding-bottom: 15px;
     background-color: white;
     border: 1px solid #ccc;
     z-index: 1000;
@@ -143,6 +157,9 @@ a {
 
   .my_navbar-links {
     display: none; /* 오른쪽 링크 숨기기 */
+  }
+  .lileft {
+    margin: 0 auto;
   }
 }
 
@@ -329,11 +346,7 @@ a {
 
 .mainnames {
   cursor: pointer;
-
   font-size: 12px;
-}
-.mainnames:hover {
-  color: red;
 }
 
 /* 캐러셀 */
@@ -381,6 +394,8 @@ a {
   img {
     width: 100%;
     aspect-ratio: 4/3;
+    overflow: hidden;
+    object-fit: cover;
   }
 }
 
@@ -402,12 +417,20 @@ a {
   text-align: center;
 }
 
+.competitionname {
+  padding-top: 15px;
+}
+.competitioncontent {
+  padding-top: 15px;
+  font-size: 14px;
+}
+
 .li.rignttoplogobox {
   display: flex;
   min-width: 60px;
 }
 
-/* 슬라이더 이미지 */
+/* 슬라이더 이미지 맞춤*/
 .my_slide img {
   width: 100%;
   height: 100%;
@@ -422,4 +445,35 @@ a {
   min-width: 100%;
   height: 100%;
   overflow: hidden;
+}
+
+/* 텍스트 밑줄 효과 */
+.lileft a,
+.mainnames {
+  position: relative;
+  text-decoration: none;
+  color: #000000;
+  padding-bottom: 5px;
+}
+
+.lileft a:before,
+.mainnames:before {
+  content: "";
+  position: absolute; /*부모 요소에는 position: relative를 주어야 한다.*/
+  background-color: rgba(74, 74, 74, 0.363);
+  height: 2px; /*밑줄 굵기*/
+
+  width: 0; /*초기에 보이지 않도록*/
+  bottom: 0; /*a태그 아래에 위치시키기*/
+  transition: 0.7s; /*애니메이션 동작 실행 시간 정의*/
+
+  /*가상 요소를 가운데로 이동시키기*/
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*태그가 호버링 되면 가상 요소의 크기를 100%로 키우기*/
+.lileft a:hover:before,
+.mainnames:hover:before {
+  width: 100%;
 }
