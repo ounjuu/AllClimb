@@ -1,0 +1,298 @@
+/* 전체 틀  */
+body {
+  margin: 0;
+}
+.my_header {
+  width: 100%;
+  height: 80px;
+  background-color: red;
+}
+.navbar {
+  width: 100%;
+  height: 80px;
+}
+
+.my_main {
+  width: 100%;
+  background-color: blue;
+  min-height: 700px;
+}
+
+.my_footer {
+  width: 100%;
+  background-color: green;
+  height: 100px;
+}
+
+.my_navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.allrocklogo {
+  width: 80px;
+  height: 80px;
+}
+
+.my_navbar_menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.my_navbar_links {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-right: 20px;
+  margin-left: auto;
+}
+
+/* 상단 메뉴들 리스트 */
+
+ul,
+li {
+  list-style-type: none;
+}
+
+.lileft {
+  margin-left: 10px;
+}
+
+/* 나중에 보이게 할 리스트 */
+.my_navbar_li {
+  display: none;
+}
+
+.righttoplogo {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}
+
+/* .rignttoplogobox {
+  margin-left: 150px;
+} */
+
+/* a 태그 효과 지움 */
+a {
+  text-decoration-line: none;
+  color: inherit;
+}
+
+/* 반응형 스타일 */
+@media screen and (max-width: 768px) {
+  .my_navbar_menu {
+    display: none; /* 기본 상태에서 메뉴 숨김 */
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+  }
+
+  .my_navbar_menu.show {
+    display: flex; /* 버튼 클릭 시 보이게 설정 */
+  }
+
+  .menu-toggle {
+    display: block; /* 작은 화면에서 버튼 보이기 */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+
+  .my_navbarleft {
+    display: flex;
+    align-items: center;
+  }
+
+  .my_navbar-logo {
+    display: block; /* 작은 화면에서도 로고 보이기 */
+  }
+
+  .my_navbar-links {
+    display: none; /* 오른쪽 링크 숨기기 */
+  }
+}
+
+/* 화면이 768px보다 클 때 */
+@media screen and (min-width: 769px) {
+  .menu-toggle {
+    display: none; /* 버튼 숨기기 */
+  }
+
+  .my_navbar_menu {
+    display: flex; /* 기본 메뉴 보이기 */
+    flex-direction: row;
+  }
+
+  .my_navbar-logo {
+    display: block; /* 로고 계속 보이기 */
+  }
+
+  .my_navbar-links {
+    display: flex; /* 오른쪽 링크도 보이기 */
+  }
+}
+
+/* 기본 상태에서 하위 메뉴 숨기기 */
+.my_navbar_li {
+  display: none;
+}
+
+/* 하위 메뉴 보이기 */
+.my_navbar_li.show {
+  display: block;
+}
+
+/* 기본 상태에서 로고와 메뉴 정렬 */
+.my_navbar-logo {
+  text-align: center;
+  flex: 1;
+}
+
+/* 큰 화면에서 메뉴 스타일 */
+@media screen and (min-width: 769px) {
+  .my_navbar_menu > li {
+    position: relative; /* 하위 메뉴를 위한 기준점 설정 */
+  }
+
+  .my_navbar_li {
+    position: absolute;
+    top: 55px; /* 헤더 높이와 동일하게 설정 */
+    left: 0;
+    width: 150px; /* 원하는 너비 설정 */
+    background-color: white; /* 배경색 추가 */
+    border: 1px solid #ccc; /* 경계선 추가 */
+    display: none; /* 기본적으로 숨김 */
+    z-index: 1000; /* 다른 요소보다 위에 표시 */
+  }
+
+  .my_navbar_li.show {
+    display: block; /* 하위 메뉴를 보이게 */
+  }
+
+  .my_navbar_menu > li:hover > .my_navbar_li {
+    display: block; /* 큰 화면에서는 hover로 하위 메뉴 표시 */
+  }
+}
+
+/* 반응형 스타일 */
+/* 반응형 스타일 */
+@media screen and (max-width: 768px) {
+  .my_navbar {
+    flex-direction: row; /* 가로 정렬 유지 */
+    justify-content: space-between; /* 양쪽 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+  }
+
+  .my_navbarleft {
+    display: flex; /* 왼쪽 버튼 보이기 */
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: block; /* 메뉴 버튼 보이기 */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+
+  .my_navbar-logo {
+    flex: 1; /* 로고가 가운데 정렬되도록 공간 확보 */
+    text-align: center; /* 텍스트나 이미지 가운데 정렬 */
+  }
+
+  .my_navebar_link {
+    display: flex; /* 오른쪽 로고 보이기 */
+    align-items: center;
+    margin-right: 10px; /* 오른쪽 여백 추가 */
+  }
+
+  .my_navbar_menu {
+    display: none; /* 기본적으로 메뉴 숨기기 */
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+  }
+
+  .my_navbar_menu.show {
+    display: flex; /* 메뉴 버튼 클릭 시 보이기 */
+  }
+}
+
+/* 큰 화면 스타일 */
+@media screen and (min-width: 769px) {
+  .my_navbar {
+    flex-direction: row; /* 가로 정렬 */
+    justify-content: space-between; /* 양쪽 정렬 */
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: none; /* 큰 화면에서는 버튼 숨기기 */
+  }
+
+  .my_navbar_menu {
+    display: flex; /* 메뉴 항상 보이기 */
+    flex-direction: row;
+  }
+
+  .my_navbar-logo {
+    margin: 0 auto; /* 로고 가운데 정렬 */
+    text-align: center;
+  }
+
+  .my_navbarleft,
+  .my_navebar_link {
+    display: flex; /* 메뉴와 링크 보이기 */
+  }
+}
+
+.navbarlinkssize {
+  width: 25%;
+}
+
+.navbarleftsize {
+  width: 25%;
+}
+
+a {
+  white-space: nowrap;
+}
+
+/* 메인 */
+.my_mainbox {
+  width: 100%;
+  min-height: 50px;
+  background-color: blueviolet;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my_mainboxnamelist {
+  margin: 0px auto;
+  display: flex;
+}
+
+.mainnames {
+  padding-right: 10px;
+}

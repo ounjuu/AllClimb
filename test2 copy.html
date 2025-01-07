@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Effect</title>
+    <style>
+      body {
+        height: 200vh; /* 스크롤을 만들기 위한 높이 */
+        margin: 0;
+      }
+      .box {
+        width: 100%;
+        height: 200px;
+        background-color: lightblue;
+        opacity: 0;
+        transform: translateY(50px); /* 아래에서 올라오는 효과 */
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+
+      /* visible 클래스가 적용되면 opacity가 1로 바뀌고 translateY로 부드럽게 올라옵니다. */
+      .visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" id="box"></div>
+
+    <script>
+      // Intersection Observer 설정
+      const box = document.getElementById("box");
+
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target); // 애니메이션 한 번만 실행
+            }
+          });
+        },
+        {
+          threshold: 0.5, // 화면에 50% 이상 보일 때 트리거
+        }
+      );
+
+      observer.observe(box); // 박스를 감시
+    </script>
+  </body>
+</html>
