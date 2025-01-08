@@ -23,7 +23,7 @@ body {
   /* 메인 클릭 이름 한글 폰트 13size */
   font-family: "Noto Sans KR", serif;
   font-optical-sizing: auto;
-  font-weight: bold;
+  font-weight: normal;
   font-style: normal;
   font-size: 13px;
 }
@@ -34,16 +34,6 @@ body {
   font-weight: normal;
   font-style: normal;
   font-size: 11px;
-}
-
-.titlenames {
-  /* 한글 폰트 13size */
-  font-family: "Noto Sans KR", serif;
-  font-optical-sizing: auto;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 12px;
-  padding-top: 8px;
 }
 
 .my_header {
@@ -240,7 +230,7 @@ a {
   .my_navbar_menu > li:hover > .my_navbar_li {
     display: block;
     opacity: 1;
-    transition: 0.8s; /* 큰 화면에서는 hover로 하위 메뉴 표시 */
+    transition: 0.5s; /* 큰 화면에서는 hover로 하위 메뉴 표시 */
   }
 }
 
@@ -339,6 +329,7 @@ a {
 .my_mainbox {
   width: 100%;
   min-height: 40px;
+  background-color: blueviolet;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -352,9 +343,11 @@ a {
 
 .allmainbox1 {
   min-height: 150px;
+  background-color: aquamarine;
 }
 .allmainbox2 {
   min-height: 150px;
+  background-color: coral;
 }
 
 .mainnames {
@@ -399,6 +392,7 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
+  background-color: rgb(105, 189, 228);
   place-items: center;
 }
 
@@ -416,6 +410,7 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
+  background-color: rgb(105, 189, 228);
   place-items: center;
 }
 .competitionimage {
@@ -537,39 +532,4 @@ a {
 .imgBox.visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* Dot Navigation */
-/* Dot Navigation (점 컨테이너) */
-.dot_navigation {
-  position: absolute; /* 슬라이더 내부에 배치 */
-  bottom: 15px; /* 하단에서의 간격 */
-  left: 50%; /* 수평 중앙 정렬 */
-  transform: translateX(-50%); /* 정확히 중앙으로 이동 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10; /* 다른 요소 위에 표시 */
-}
-
-.dot_navigation .dot {
-  width: 10px;
-  height: 10px;
-  margin: 0 5px; /* 점 간격 */
-  background-color: rgba(255, 255, 255, 0.7); /* 반투명 흰색 */
-  border-radius: 50%; /* 원 모양 */
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.dot_navigation .dot.active {
-  background-color: rgba(255, 255, 255, 1); /* 활성화된 점 색상 */
-}
-.my_carousel {
-  position: relative; /* 점의 절대 위치 기준 */
-  overflow: hidden; /* 이미지 내부로 점을 제한 */
-}
-
-.slider_container {
-  position: relative; /* 점 배치 기준 */
 }

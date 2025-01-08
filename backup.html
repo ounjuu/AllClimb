@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@100..900&family=Playwrite+ES+Deco+Guides&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AllRock</title>
@@ -24,21 +30,13 @@
                 <button class="menu-toggle" aria-label="Toggle menu">☰</button>
                 <ul class="my_navbar_menu">
                   <li class="lileft">
-                    <a href="#">암장소식</a>
-                    <ul class="my_navbar_li">
-                      <li class="lileft"><a href="#">전국 암장</a></li>
-                      <li class="lileft"><a href="#">New 암장</a></li>
-                    </ul>
+                    <a href="#" class="font1">CLIMBING GYM</a>
                   </li>
                   <li class="lileft">
-                    <a href="#">Event</a>
-                    <ul class="my_navbar_li">
-                      <li class="lileft"><a href="#">대회</a></li>
-                      <li class="lileft"><a href="#">acc</a></li>
-                    </ul>
+                    <a href="#" class="font1">EVENT</a>
                   </li>
-                  <li class="lileft"><a href="#">Class</a></li>
-                  <li class="lileft"><a href="#">About</a></li>
+                  <li class="lileft"><a href="#" class="font1">SHOP</a></li>
+                  <li class="lileft"><a href="#" class="font1">ABOUT</a></li>
                 </ul>
               </div>
             </div>
@@ -46,7 +44,7 @@
             <div class="my_navbar-logo">
               <a href="#">
                 <img
-                  src="./image/allrocklogo.png"
+                  src="./image/allrocklogo4.png"
                   alt="allrockmain"
                   class="allrocklogo"
                 />
@@ -57,13 +55,17 @@
               <div class="my_navebar_link">
                 <ul class="my_navbar_links">
                   <li class="rignttoplogobox">
-                    <a href="#"
+                    <a
+                      href="https://www.instagram.com/daramju__/"
+                      target="_blank"
                       ><img
                         src="./image/insta_logo.png"
                         alt="allrockmain"
                         class="righttoplogo righttoplogo1"
                     /></a>
-                    <a href="#"
+                    <a
+                      href="https://workspace.google.com/intl/ko/gmail/"
+                      target="_blank"
                       ><img
                         src="./image/google_logo.png"
                         alt="allrockmain"
@@ -79,37 +81,178 @@
         <!-- 메인 -->
         <div class="my_main">
           <!-- 캐러셀 -->
-          <div class="my_carousel my_mainbox"></div>
-          <!-- 메인 박스 메뉴 이름 -->
-          <div class="my_mainbox my_mainbox1">
-            <div class="my_mainboxname1">
-              <ul class="my_mainboxnamelist">
-                <li class="mainnames">전체</li>
-                <li class="mainnames">Event</li>
-                <li class="mainnames">Class</li>
-                <li class="mainnames">New Gym</li>
-              </ul>
+          <div class="my_carousel my_mainbox">
+            <div class="slider_container">
+              <div class="my_slider">
+                <div class="my_slide">
+                  <img
+                    src="./image/climbing_image5.jpg"
+                    alt="climbingimage"
+                    class="slide55"
+                  />
+                </div>
+                <!-- 복제된 마지막 슬라이드 -->
+                <div class="my_slide">
+                  <img
+                    src="./image/waverockbaner.png"
+                    alt="climbingimage"
+                    class="slide11"
+                  />
+                </div>
+                <div class="my_slide">
+                  <img
+                    src="./image/climbing_image1.jpg"
+                    alt="climbingimage"
+                    class="slide22"
+                  />
+                </div>
+                <div class="my_slide">
+                  <img
+                    src="./image/climbing_image3.jpg"
+                    alt="climbingimage"
+                    class="slide33"
+                  />
+                </div>
+                <div class="my_slide">
+                  <img
+                    src="./image/climbing_image4.jpg"
+                    alt="climbingimage"
+                    class="slide44"
+                  />
+                </div>
+                <div class="my_slide">
+                  <img
+                    src="./image/climbing_image5.jpg"
+                    alt="climbingimage"
+                    class="slide55"
+                  />
+                </div>
+                <div class="my_slide">
+                  <img
+                    src="./image/waverockbaner.png"
+                    alt="climbingimage"
+                    class="slide11"
+                  />
+                </div>
+                <!-- 복제된 첫 번째 슬라이드 -->
+              </div>
+              <!-- 점 내비게이션 -->
+              <div class="dot_navigation"></div>
             </div>
           </div>
-          <!-- 메인 박스 9개 만들기 -->
-          <div class="my_mainbox my_mainbox2"></div>
-          <!-- 메인 하단 박스 이름 -->
-          <div class="my_mainbox my_mainbox3">대회안내</div>
-          <!-- 메인 하단 박스 3개 만들기 -->
-          <div class="my_mainbox my_mainbox4"></div>
+
+          <!-- 캐러셀 -->
+          <!-- 사진 9개 박스 -->
+          <div class="allmainbox1">
+            <!-- 메인 박스 메뉴 이름 -->
+            <div class="my_mainbox my_mainbox1">
+              <div class="my_mainboxname1">
+                <ul class="my_mainboxnamelist">
+                  <li
+                    class="mainnames"
+                    onclick="moveHeader('전체'); moveHeader2('전체');"
+                    class="font2"
+                  >
+                    전체
+                  </li>
+                  <li
+                    class="mainnames"
+                    onclick="moveHeader('Event'); moveHeader2('Event');"
+                    class="font2"
+                  >
+                    EVENT
+                  </li>
+                  <li
+                    class="mainnames"
+                    onclick="moveHeader('Class'); moveHeader2('Class');"
+                    class="font2"
+                  >
+                    CLASS
+                  </li>
+                  <li
+                    class="mainnames"
+                    onclick="moveHeader('New Gym'); moveHeader2('New Gym');"
+                    class="font2"
+                  >
+                    NEW GYM
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- 메인 박스 9개 만들기 -->
+            <div class="my_mainbox my_mainbox2">
+              <div class="boxnine"></div>
+            </div>
+          </div>
+          <div class="allmainbox2">
+            <!-- 메인 하단 박스 이름 -->
+            <div class="my_mainbox my_mainbox3">
+              <p class="font2 competitioncontent">대회안내</p>
+            </div>
+            <!-- 메인 하단 박스 3개 만들기 -->
+            <div class="my_mainbox my_mainbox4">
+              <div class="competitionbox">
+                <div class="competitionbox1">
+                  <img
+                    src="./image/tcbc2.png"
+                    alt="samjizom"
+                    class="competitionimage"
+                  />
+                  <div class="competitionname">
+                    <p class="font2">TCBC : 2025</p>
+                  </div>
+                </div>
+
+                <div class="competitionbox2">
+                  <img
+                    src="./image/thesolution.gif"
+                    alt="samjizom"
+                    class="competitionimage"
+                  />
+                  <div class="competitionname">
+                    <p class="font2">THE SOLUTION</p>
+                  </div>
+                </div>
+                <div class="competitionbox3">
+                  <img
+                    src="./image/TCBC.jpg"
+                    alt="samjizom"
+                    class="competitionimage"
+                  />
+                  <div class="competitionname">
+                    <p class="font2">TCBC : REBOOT</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <!-- 푸터 -->
         <div class="my_footer">
           <div class="footertext">
             <p style="text-align: center">
-              <a href="https://www.instagram.com/" target="_blank">
+              <a href="https://www.instagram.com/daramju__/" target="_blank">
                 <img
                   src="image/insta_logo.png"
                   alt="instalogo"
-                  style="width: 20px"
+                  style="width: 18px; padding-bottom: 2px"
                 />
               </a>
-              <strong>All ROCK</strong>
+              <br />
+              <span><strong>ALL ROCK</strong></span>
+              <span
+                ><br />대표 | 김은주 &nbsp; 사업자번호 |
+                229-00-01111&nbsp;</span
+              >
+              <span
+                >주소 | 서울특별시 마포구 숭문4길 6 &nbsp; E-mail |
+                allrockk@naver.com |
+              </span>
+              <span>&nbsp;<u>이용약관</u>&nbsp; | &nbsp;</span>
+              <a href="#" rel="nofollow"
+                ><span><u>개인정보처리방침</u></span></a
+              ><br />
+              <span>Copyright ⓒ 2025 ALLROCK All rights reserved.</span>
             </p>
           </div>
         </div>
@@ -149,5 +292,7 @@
           });
         });
     </script>
+    <!-- 캐러셀 및 JS -->
+    <script src="./backup0.js"></script>
   </body>
 </html>

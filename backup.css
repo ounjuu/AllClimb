@@ -2,10 +2,56 @@
 body {
   margin: 0;
 }
+.font1 {
+  /* 한글 폰트 12size */
+  font-family: "Noto Sans KR", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 12px;
+}
+
+.font2 {
+  /* 한글 폰트 13size */
+  font-family: "Noto Sans KR", serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 13px;
+}
+.my_mainboxnamelist {
+  /* 메인 클릭 이름 한글 폰트 13size */
+  font-family: "Noto Sans KR", serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 13px;
+}
+.footertext {
+  /* 한글 폰트 13size */
+  font-family: "Noto Sans KR", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 11px;
+}
+
+.titlenames {
+  /* 한글 폰트 13size */
+  font-family: "Noto Sans KR", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 12px;
+  padding-top: 8px;
+}
+
 .my_header {
   width: 100%;
   height: 80px;
-  background-color: red;
+  background-color: white;
+  position: fixed;
+  z-index: 1;
 }
 .navbar {
   width: 100%;
@@ -14,14 +60,17 @@ body {
 
 .my_main {
   width: 100%;
-  background-color: blue;
   min-height: 700px;
+  padding-top: 80px;
 }
 
 .my_footer {
   width: 100%;
-  background-color: green;
   height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
 }
 
 .my_navbar {
@@ -65,11 +114,13 @@ li {
 /* 나중에 보이게 할 리스트 */
 .my_navbar_li {
   display: none;
+
+  padding-bottom: 8px;
 }
 
 .righttoplogo {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   margin-right: 5px;
 }
 
@@ -92,6 +143,7 @@ a {
     top: 80px;
     left: 0;
     width: 100%;
+    padding-bottom: 15px;
     background-color: white;
     border: 1px solid #ccc;
     z-index: 1000;
@@ -121,6 +173,9 @@ a {
 
   .my_navbar-links {
     display: none; /* 오른쪽 링크 숨기기 */
+  }
+  .lileft {
+    margin: 0 auto;
   }
 }
 
@@ -173,6 +228,7 @@ a {
     width: 150px; /* 원하는 너비 설정 */
     background-color: white; /* 배경색 추가 */
     border: 1px solid #ccc; /* 경계선 추가 */
+    opacity: 0%;
     display: none; /* 기본적으로 숨김 */
     z-index: 1000; /* 다른 요소보다 위에 표시 */
   }
@@ -182,7 +238,9 @@ a {
   }
 
   .my_navbar_menu > li:hover > .my_navbar_li {
-    display: block; /* 큰 화면에서는 hover로 하위 메뉴 표시 */
+    display: block;
+    opacity: 1;
+    transition: 0.8s; /* 큰 화면에서는 hover로 하위 메뉴 표시 */
   }
 }
 
@@ -280,9 +338,7 @@ a {
 /* 메인 */
 .my_mainbox {
   width: 100%;
-  min-height: 50px;
-  background-color: blueviolet;
-  margin-bottom: 10px;
+  min-height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -291,8 +347,229 @@ a {
 .my_mainboxnamelist {
   margin: 0px auto;
   display: flex;
+  gap: 10px;
+}
+
+.allmainbox1 {
+  min-height: 150px;
+}
+.allmainbox2 {
+  min-height: 150px;
 }
 
 .mainnames {
-  padding-right: 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/* 캐러셀 */
+.slider_container {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.my_slider {
+  display: flex;
+  flex-shrink: 0;
+  transform: translateX(-100%); /* 첫 번째 슬라이드로 이동 */
+  width: 100%;
+  height: 100%;
+}
+
+.slider_container .my_slider .my_slide {
+  user-select: none;
+  min-width: 100%;
+  height: 100%;
+}
+
+.my_slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5rem;
+}
+.my_carousel {
+  height: 550px;
+}
+
+/* 박스 9개 */
+.boxnine {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  place-items: center;
+}
+
+.imgBox {
+  img {
+    width: 100%;
+    aspect-ratio: 4/3;
+
+    object-fit: cover;
+  }
+}
+
+.competitionbox {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  place-items: center;
+}
+.competitionimage {
+  width: 100%;
+  aspect-ratio: 4/3;
+}
+
+.competitionname,
+.title {
+  text-align: center;
+}
+
+.competitionname {
+  padding-top: 15px;
+}
+.competitioncontent {
+  padding-top: 12px;
+  font-size: 13px;
+}
+
+.li.rignttoplogobox {
+  display: flex;
+  min-width: 60px;
+}
+
+/* 슬라이더 이미지 맞춤*/
+.my_slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지 비율 유지하면서 슬라이드 크기에 맞춤 */
+  display: block;
+}
+
+.my_slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 텍스트 밑줄 효과 */
+.lileft a,
+.mainnames {
+  position: relative;
+  text-decoration: none;
+  color: #000000;
+  padding-bottom: 5px;
+}
+
+.lileft a:before,
+.mainnames:before {
+  content: "";
+  position: absolute; /*부모 요소에는 position: relative를 주어야 한다.*/
+  background-color: rgba(74, 74, 74, 0.363);
+  height: 2px; /*밑줄 굵기*/
+
+  width: 0; /*초기에 보이지 않도록*/
+  bottom: 0; /*a태그 아래에 위치시키기*/
+  transition: 0.7s; /*애니메이션 동작 실행 시간 정의*/
+
+  /*가상 요소를 가운데로 이동시키기*/
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*태그가 호버링 되면 가상 요소의 크기를 100%로 키우기*/
+.lileft a:hover:before,
+.mainnames:hover:before {
+  width: 100%;
+}
+
+/* 하단 대회 안내 이미지 hover */
+/* 부모 요소 스타일 */
+.competitionbox1,
+.competitionbox2,
+.competitionbox3 {
+  overflow: hidden;
+  position: relative; /* 자식 요소의 위치 설정 기준 */
+  width: 100%;
+  height: 100%; /* 부모 요소의 높이를 원하는 크기로 설정 */
+}
+
+/* 이미지 스타일 */
+.competitionimage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지 비율 유지하며 영역에 맞춤 */
+  transition: transform 0.3s ease; /* 확대 효과 추가 */
+}
+
+/* 텍스트 스타일 */
+.competitionname {
+  position: absolute; /* 이미지 위에 텍스트 고정 */
+  bottom: 0; /* 하단에 고정 */
+  width: 100%;
+  text-align: center; /* 텍스트 가운데 정렬 */
+  background-color: rgba(0, 0, 0, 0.7); /* 반투명 배경 */
+  color: #fff; /* 텍스트 색상 */
+  padding-top: 10px;
+  font-size: 1rem;
+  height: 40px;
+}
+
+/* 이미지 확대 효과 */
+.competitionimage:hover {
+  transform: scale(1.2); /* 이미지 확대 (1.2배) */
+}
+
+/* 이미지 9개 효과 */
+
+.imgBox {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-in-out;
+}
+
+.imgBox.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dot Navigation */
+/* Dot Navigation (점 컨테이너) */
+.dot_navigation {
+  position: absolute; /* 슬라이더 내부에 배치 */
+  bottom: 15px; /* 하단에서의 간격 */
+  left: 50%; /* 수평 중앙 정렬 */
+  transform: translateX(-50%); /* 정확히 중앙으로 이동 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10; /* 다른 요소 위에 표시 */
+}
+
+.dot_navigation .dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px; /* 점 간격 */
+  background-color: rgba(255, 255, 255, 0.7); /* 반투명 흰색 */
+  border-radius: 50%; /* 원 모양 */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot_navigation .dot.active {
+  background-color: rgba(255, 255, 255, 1); /* 활성화된 점 색상 */
+}
+.my_carousel {
+  position: relative; /* 점의 절대 위치 기준 */
+  overflow: hidden; /* 이미지 내부로 점을 제한 */
+}
+
+.slider_container {
+  position: relative; /* 점 배치 기준 */
 }

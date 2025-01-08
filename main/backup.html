@@ -16,7 +16,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./allrockmain.css" />
+    <link rel="stylesheet" href="../css/backup.css" />
   </head>
   <body>
     <body>
@@ -58,7 +58,7 @@
             <div class="my_navbar-logo">
               <a href="#">
                 <img
-                  src="./image/allrocklogo.png"
+                  src="./image/allrocklogo_3.png"
                   alt="allrockmain"
                   class="allrocklogo"
                 />
@@ -69,13 +69,17 @@
               <div class="my_navebar_link">
                 <ul class="my_navbar_links">
                   <li class="rignttoplogobox">
-                    <a href="https://www.instagram.com/daramju__/"
+                    <a
+                      href="https://www.instagram.com/daramju__/"
+                      target="_blank"
                       ><img
                         src="./image/insta_logo.png"
                         alt="allrockmain"
                         class="righttoplogo righttoplogo1"
                     /></a>
-                    <a href="https://workspace.google.com/intl/ko/gmail/"
+                    <a
+                      href="https://workspace.google.com/intl/ko/gmail/"
+                      target="_blank"
                       ><img
                         src="./image/google_logo.png"
                         alt="allrockmain"
@@ -95,26 +99,54 @@
             <div class="slider_container">
               <div class="my_slider">
                 <div class="my_slide">
-                  <span>슬라이드5</span>
+                  <img
+                    src="./image/climbing_image5.jpg"
+                    alt="climbingimage"
+                    class="slide55"
+                  />
                 </div>
                 <!-- 복제된 마지막 슬라이드 -->
                 <div class="my_slide">
-                  <img src="./image/climbing_image1.jpg" alt="climbingimage" />
+                  <img
+                    src="./image/waverockbaner.png"
+                    alt="climbingimage"
+                    class="slide11"
+                  />
                 </div>
                 <div class="my_slide">
-                  <span>슬라이드2</span>
+                  <img
+                    src="./image/climbing_image1.jpg"
+                    alt="climbingimage"
+                    class="slide22"
+                  />
                 </div>
                 <div class="my_slide">
-                  <span>슬라이드3</span>
+                  <img
+                    src="./image/climbing_image3.jpg"
+                    alt="climbingimage"
+                    class="slide33"
+                  />
                 </div>
                 <div class="my_slide">
-                  <span>슬라이드4</span>
+                  <img
+                    src="./image/climbing_image4.jpg"
+                    alt="climbingimage"
+                    class="slide44"
+                  />
                 </div>
                 <div class="my_slide">
-                  <span>슬라이드5</span>
+                  <img
+                    src="./image/climbing_image5.jpg"
+                    alt="climbingimage"
+                    class="slide55"
+                  />
                 </div>
                 <div class="my_slide">
-                  <img src="./image/climbing_image1.jpg" alt="climbingimage" />
+                  <img
+                    src="./image/waverockbaner.png"
+                    alt="climbingimage"
+                    class="slide11"
+                  />
                 </div>
                 <!-- 복제된 첫 번째 슬라이드 -->
               </div>
@@ -130,28 +162,28 @@
                 <ul class="my_mainboxnamelist">
                   <li
                     class="mainnames"
-                    onclick="moveHeader('전체')"
+                    onclick="moveHeader('전체'); moveHeader2('전체');"
                     class="font2"
                   >
                     전체
                   </li>
                   <li
                     class="mainnames"
-                    onclick="moveHeader('Event')"
+                    onclick="moveHeader('Event'); moveHeader2('Event');"
                     class="font2"
                   >
                     EVENT
                   </li>
                   <li
                     class="mainnames"
-                    onclick="moveHeader('Class')"
+                    onclick="moveHeader('Class'); moveHeader2('Class');"
                     class="font2"
                   >
                     CLASS
                   </li>
                   <li
                     class="mainnames"
-                    onclick="moveHeader('New Gym')"
+                    onclick="moveHeader('New Gym'); moveHeader2('New Gym');"
                     class="font2"
                   >
                     NEW GYM
@@ -167,7 +199,7 @@
           <div class="allmainbox2">
             <!-- 메인 하단 박스 이름 -->
             <div class="my_mainbox my_mainbox3">
-              <p class="font2">대회안내</p>
+              <p class="font2 competitioncontent">대회안내</p>
             </div>
             <!-- 메인 하단 박스 3개 만들기 -->
             <div class="my_mainbox my_mainbox4">
@@ -182,6 +214,7 @@
                     <p class="font2">TCBC : 2025</p>
                   </div>
                 </div>
+
                 <div class="competitionbox2">
                   <img
                     src="./image/thesolution.gif"
@@ -214,10 +247,24 @@
                 <img
                   src="image/insta_logo.png"
                   alt="instalogo"
-                  style="width: 20px"
+                  style="width: 18px; padding-bottom: 2px"
                 />
               </a>
-              <strong>All ROCK</strong>
+              <br />
+              <span><strong>ALL ROCK</strong></span>
+              <span
+                ><br />대표 | 김은주 &nbsp; 사업자번호 |
+                229-00-01111&nbsp;</span
+              >
+              <span
+                >주소 | 서울특별시 마포구 숭문4길 6 &nbsp; E-mail |
+                allrockk@naver.com |
+              </span>
+              <span>&nbsp;<u>이용약관</u>&nbsp; | &nbsp;</span>
+              <a href="#" rel="nofollow"
+                ><span><u>개인정보처리방침</u></span></a
+              ><br />
+              <span>Copyright ⓒ 2025 ALLROCK All rights reserved.</span>
             </p>
           </div>
         </div>
@@ -257,7 +304,7 @@
           });
         });
     </script>
-    <!-- 캐러셀 -->
-    <script src="./carousel_1.js"></script>
+    <!-- 캐러셀 및 JS -->
+    <script src="../js/backup.js"></script>
   </body>
 </html>
