@@ -45,6 +45,37 @@ body {
   font-size: 12px;
   padding-top: 8px;
 }
+
+.h3textsize2 {
+  /* 한글 폰트 13size */
+  font-family: "Noto Sans KR", serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 60px;
+  padding-top: 8px;
+}
+
+.h3textsize3 {
+  /* 한글 폰트 */
+  font-family: "Noto Sans KR", serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 30px;
+  padding-top: 8px;
+  color: rgb(101, 101, 101);
+}
+
+.ptextsize {
+  /* 한글 폰트 13size */
+  font-family: "Nanum Gothic", serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 18px;
+  padding-top: 8px;
+  color: gray;
+}
 /* 텍스트 밑줄 효과 */
 .lileft a,
 .mainnames {
@@ -469,12 +500,10 @@ a {
   } */
 .firstulstyle {
   position: relative;
-  background-color: blue;
 }
 
 .parentslide {
   position: relative;
-  background-color: rgb(193, 136, 193);
 }
 
 .slide {
@@ -513,6 +542,7 @@ a {
   object-fit: cover; /* 비율을 유지하며 박스를 꽉 채움 */
   padding-left: 80px;
   background-color: white;
+  width: 50%;
 }
 
 @media (max-width: 769px) {
@@ -613,6 +643,6 @@ a {
   font-size: 50px; /* 글씨 크기 */
   font-weight: bold; /* 글씨 두께 */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 텍스트 그림자 */
-  top: 50%;
-  left: 0;
+  top: 35%;
+  left: 5%;
 }
