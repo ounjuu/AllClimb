@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Overlap</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 300vh; /* 스크롤 공간 확보 */
+      }
+
+      .container {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .image {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .image-1 {
+        z-index: 1;
+        background-image: url("image1.jpg"); /* 첫 번째 이미지 */
+      }
+
+      .image-2 {
+        z-index: 2;
+        background-image: url("image2.jpg"); /* 두 번째 이미지 */
+      }
+
+      .image-3 {
+        z-index: 3;
+        background-image: url("image3.jpg"); /* 세 번째 이미지 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image image-1">1</div>
+      <div class="image image-2">2</div>
+      <div class="image image-3">3</div>
+    </div>
+    <script>
+      window.addEventListener("scroll", () => {
+        const images = document.querySelectorAll(".image");
+        images.forEach((image, index) => {
+          const offset = window.scrollY - index * window.innerHeight;
+          if (offset >= 0) {
+            image.style.zIndex = 3 - index; // 스크롤에 따라 z-index 조정
+          } else {
+            image.style.zIndex = index + 1;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

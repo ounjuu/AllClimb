@@ -1,7 +1,6 @@
 /* 전체 틀  */
 body {
   margin: 0;
-  overflow-x: hidden;
 }
 .font1 {
   /* 한글 폰트 12size */
@@ -46,13 +45,42 @@ body {
   font-size: 12px;
   padding-top: 8px;
 }
+/* 텍스트 밑줄 효과 */
+.lileft a,
+.mainnames {
+  position: relative;
+  text-decoration: none;
+  color: #000000;
+  padding-bottom: 5px;
+}
 
+.lileft a:before,
+.mainnames:before {
+  content: "";
+  position: absolute; /*부모 요소에는 position: relative를 주어야 한다.*/
+  background-color: rgba(74, 74, 74, 0.363);
+  height: 2px; /*밑줄 굵기*/
+
+  width: 0; /*초기에 보이지 않도록*/
+  bottom: 0; /*a태그 아래에 위치시키기*/
+  transition: 0.7s; /*애니메이션 동작 실행 시간 정의*/
+
+  /*가상 요소를 가운데로 이동시키기*/
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*태그가 호버링 되면 가상 요소의 크기를 100%로 키우기*/
+.lileft a:hover:before,
+.mainnames:hover:before {
+  width: 100%;
+}
 .my_header {
   width: 100%;
   height: 80px;
   background-color: white;
   position: fixed;
-  z-index: 1;
+  z-index: 100;
 }
 .navbar {
   width: 100%;
@@ -420,6 +448,52 @@ a {
   height: calc(100vh - 80px); /* 전체 화면 높이에서 패딩 높이 제외 */
   overflow: hidden; /* 이미지가 박스를 벗어나지 않도록 설정 */
 }
+/* 이미지 겹치기 */
+/*
+  .firstulstyle {
+    position: relative;
+    background-color: rgb(205, 122, 205);
+
+
+  .imgtextbox1 {
+    position: absolute;
+    z-index: 1;
+  }
+  .imgtextbox2 {
+    position: absolute;
+    z-index: 2;
+  }
+  .imgtextbox3 {
+    position: absolute;
+    z-index: 3;
+  } */
+.firstulstyle {
+  position: relative;
+  background-color: blue;
+}
+
+.parentslide {
+  position: relative;
+  background-color: rgb(193, 136, 193);
+}
+
+.slide {
+  position: sticky;
+  top: 40px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.2em;
+}
+.largeimgbox1 {
+  position: sticky;
+  top: 40px;
+  height: 100vh; /* 화면에 꽉 차도록 설정 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /* 첫번째 이미지 스타일 */
 .imgbox1 img {
@@ -431,9 +505,37 @@ a {
 .imgboxx1,
 .imgboxx2,
 .imgboxx3 {
-  width: 40%;
+  width: 50%;
   object-fit: cover; /* 비율을 유지하며 박스를 꽉 채움 */
-  height: 100%; /* 화면 크기에 맞게 */
+  height: 90%; /* 화면 크기에 맞게 */
+}
+.textboxx1 {
+  object-fit: cover; /* 비율을 유지하며 박스를 꽉 채움 */
+  padding-left: 80px;
+  background-color: white;
+}
+
+@media (max-width: 769px) {
+  .imgboxx1,
+  .imgboxx2,
+  .imgboxx3 {
+    width: 100%;
+    height: calc(100vh - 80px);
+    object-fit: cover; /* 비율을 유지하며 박스를 꽉 채움 */
+  }
+  .textboxx1 {
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+  }
+  .imgtextbox1,
+  .imgtextbox2,
+  .imgtextbox3 {
+    flex-direction: column;
+    height: auto;
+  }
 }
 
 .imgboxx1 img,
@@ -450,10 +552,6 @@ a {
 .imgtextbox3 {
   display: flex;
   align-items: center;
-}
-
-.textboxx1 {
-  padding-left: 80px;
 }
 
 /* 사진 위 텍스트 스타일 */
@@ -481,7 +579,7 @@ a {
   padding: 120px 80px;
 }
 
-@media (max-width: 769px) {
+@media screen and (max-width: 769px) {
   .h3textsize {
     font-size: 40px;
     line-height: 1.2;
@@ -496,16 +594,17 @@ a {
   height: calc(100vh - 80px); /* 전체 화면 높이에서 패딩 높이 제외 */
   overflow: hidden; /* 이미지가 박스를 벗어나지 않도록 설정 */
   display: flex; /* 중앙 정렬을 위한 flexbox */
-  justify-content: center; /* 수평 가운데 정렬 */
-  align-items: center; /* 수직 가운데 정렬 */
-  border-radius: 30px; /* 모서리를 둥글게 */
   position: relative;
+
+  align-items: center;
+  justify-content: center;
 }
 
 .largeimg1 img {
   width: 100%; /* 너비를 박스 너비에 맞춤 */
-  height: 100%; /* 높이를 박스 높이에 맞춤 */
+  height: 90%; /* 높이를 박스 높이에 맞춤 */
   object-fit: cover; /* 비율을 유지하며 박스를 꽉 채움 */
+  border-radius: 30px;
 }
 
 .largetextbox {
