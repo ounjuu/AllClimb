@@ -69,7 +69,7 @@ body {
 
 .ptextsize {
   /* 한글 폰트 13size */
-  font-family: "Nanum Gothic", serif;
+  font-family: "Noto Sans KR", serif;
   font-weight: bold;
   font-style: normal;
   font-size: 18px;
@@ -515,6 +515,10 @@ a {
   align-items: center;
   letter-spacing: 0.2em;
 }
+
+@media (max-width: 769px) {
+}
+
 .largeimgbox1 {
   position: sticky;
   top: 40px;
@@ -550,12 +554,12 @@ a {
   .imgboxx2,
   .imgboxx3 {
     width: 100%;
-    height: calc(100vh - 80px);
-    object-fit: cover; /* 비율을 유지하며 박스를 꽉 채움 */
+    height: calc(100vh - 280px);
+    object-fit: cover; /*비율을 유지하며 박스를 꽉 채움 */
   }
   .textboxx1 {
     width: 100%;
-    height: auto;
+    height: 200px;
     padding-top: 30px;
     padding-bottom: 20px;
     padding-left: 30px;
@@ -611,12 +615,32 @@ a {
 
 @media screen and (max-width: 769px) {
   .h3textsize {
-    font-size: 40px;
+    font-size: 35px;
     line-height: 1.2;
+    padding-top: 40px;
+  }
+
+  .h3textsize2 {
+    font-size: 45px;
+  }
+
+  .h3textsize3 {
+    font-size: 25px;
   }
   .textbox1 {
     padding: 80px 30px;
   }
+  .ptextsize {
+    font-size: 15px;
+  }
+  .textbox {
+    padding: 0px 80px;
+  }
+}
+
+/* 하단 큰 이미지 폰트 사이즈 */
+.numbersize {
+  font-size: 130px;
 }
 
 .largeimg1 {
@@ -625,7 +649,6 @@ a {
   overflow: hidden; /* 이미지가 박스를 벗어나지 않도록 설정 */
   display: flex; /* 중앙 정렬을 위한 flexbox */
   position: relative;
-
   align-items: center;
   justify-content: center;
 }
@@ -638,11 +661,106 @@ a {
 }
 
 .largetextbox {
+  font-family: "Noto Sans KR", serif;
+  font-optical-sizing: auto;
   position: absolute; /* 부모 요소(.imgbox1)를 기준으로 위치 설정 */
   color: white; /* 글씨 색상 */
-  font-size: 50px; /* 글씨 크기 */
+  display: flex;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.largetimgtext1 {
+  font-size: 45px;
+  padding-left: 80px;
+  padding-right: 50px;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  width: 45%;
+
   font-weight: bold; /* 글씨 두께 */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 텍스트 그림자 */
-  top: 35%;
-  left: 5%;
+}
+
+.largetimgtext2 > h3 {
+  font-size: 20px;
+  color: rgba(243, 243, 243, 0.929);
+  font-weight: 400;
+  padding-left: 100px;
+  padding-bottom: 120px;
+  padding-right: 100px;
+  font-weight: bold; /* 글씨 두께 */
+  letter-spacing: 2px;
+}
+
+.largeimgtext2 {
+  width: 55%;
+}
+
+@media screen and (max-width: 769px) {
+  .numbersize {
+    font-size: 100px;
+  }
+  .largetimgtext1 {
+    font-size: 25px;
+    padding-right: 25px;
+    font-weight: bold; /* 글씨 두께 */
+  }
+
+  .largetimgtext2 > h3 {
+    font-size: 15px;
+    color: rgba(243, 243, 243, 0.929);
+    font-weight: 400;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    font-weight: bold; /* 글씨 두께 */
+  }
+}
+
+/* Top 버튼 스타일 */
+.top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: transparent; /* 배경색 투명 */
+  color: black; /* 글씨 색 검정 */
+  border: 2px solid rgb(30, 30, 30); /* 테두리 검정 */
+  border-radius: 50%; /* 원형 */
+  width: 45px; /* 크기 줄임 */
+  height: 45px; /* 크기 줄임 */
+  display: flex; /* 가운데 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  font-size: 13px; /* 글씨 크기 줄임 */
+  font-weight: bold; /* 글씨 두껍게 */
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+  transition: all 0.3s ease-in-out; /* 부드러운 애니메이션 */
+}
+
+/* Hover 시 스타일 */
+.top-button:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* 배경에 은은한 검정색 투명 */
+  color: white; /* Hover 시 글씨 색 변경 */
+  border-color: black; /* 테두리는 유지 */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Hover 시 그림자 강조 */
+  transform: translateY(-3px) scale(1.1); /* 살짝 올라가는 효과 */
+}
+
+/* 클릭 시 효과 */
+.top-button:active {
+  transform: scale(0.95); /* 클릭 시 살짝 눌리는 느낌 */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* 그림자 줄이기 */
+}
+
+/* 반응형: 모바일 크기에서 크기 조정 */
+@media (max-width: 768px) {
+  .top-button {
+    bottom: 15px;
+    right: 15px;
+    width: 40px; /* 모바일에서 더 작은 크기 */
+    height: 40px;
+    font-size: 12px; /* 글씨 크기 줄임 */
+  }
 }
