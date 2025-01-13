@@ -112,7 +112,7 @@ const moveHeader = (type) => {
 };
 
 moveHeader("전체");
-//// 슬라이드 복붙
+//// 슬라이드
 
 const slider = document.querySelector(".my_slider");
 const slides = document.querySelectorAll(".my_slide");
@@ -231,7 +231,6 @@ slider.addEventListener("touchend", (e) => {
 // 자동 슬라이드 시작
 startAutoSlide();
 // 이미지 스르륵 효과
-// 이미지 스르륵 효과
 // 이미지 컨테이너
 const boxContainer = document.querySelector(".boxnine");
 
@@ -340,3 +339,30 @@ slider.addEventListener("transitionend", () => {
 // 초기 설정
 createDots();
 startAutoSlide();
+
+// 가로 스크롤 JS 수정
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollbox1 = document.querySelector(".scrollbox1");
+  const initialOffsetTop = scrollbox1.offsetTop;
+  const movingRightDistance = 200; // 오른쪽으로 이동할 거리
+
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
+
+    if (scrollTop >= initialOffsetTop) {
+      // 스크롤이 .scrollbox1의 초기 위치 이상일 때 상단 고정
+      scrollbox1.classList.add("sticky");
+
+      // 추가로 더 스크롤 시 오른쪽으로 이동
+      const moveOffset = scrollTop - initialOffsetTop;
+      if (moveOffset > movingRightDistance) {
+        scrollbox1.classList.add("moving-right");
+      } else {
+        scrollbox1.classList.remove("moving-right");
+      }
+    } else {
+      // 초기 위치보다 위로 스크롤하면 고정 해제
+      scrollbox1.classList.remove("sticky", "moving-right");
+    }
+  });
+});

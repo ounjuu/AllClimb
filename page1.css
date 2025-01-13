@@ -671,7 +671,7 @@ a {
   padding-bottom: 30px;
 }
 .largetimgtext1 {
-  font-size: 45px;
+  font-size: 40px;
   padding-left: 80px;
   padding-right: 50px;
   padding-top: 40px;
@@ -686,9 +686,10 @@ a {
   color: rgba(243, 243, 243, 0.929);
   font-weight: 400;
   padding-left: 100px;
-  padding-bottom: 120px;
+  padding-bottom: 100px;
   padding-right: 100px;
-  font-weight: bold; /* 글씨 두께 */
+  padding-top: 260px;
+  font-weight: normal; /* 글씨 두께 */
   letter-spacing: 2px;
 }
 
@@ -713,6 +714,7 @@ a {
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 50px;
+    padding-top: 150px;
     font-weight: bold; /* 글씨 두께 */
   }
 }
@@ -762,5 +764,64 @@ a {
     width: 40px; /* 모바일에서 더 작은 크기 */
     height: 40px;
     font-size: 12px; /* 글씨 크기 줄임 */
+  }
+}
+
+/* 하단 스크롤 박스 */
+
+/* */
+.bottomscrollbox {
+  position: relative;
+}
+
+.scrollbox1 {
+  top: 80px;
+  height: auto;
+  display: flex;
+  height: 90vh;
+}
+
+.smallimg_box {
+  margin-left: 40px;
+  height: 70%;
+  margin-right: 40px;
+}
+
+.btimg4 {
+  width: 100vh;
+  object-fit: cover; /* 비율을 유지하며 박스를 꽉 채움 */
+  height: 100%;
+}
+
+.texts4 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+/* 흘러가기 */
+.bottomscrollboxwrap {
+  width: 100%;
+  overflow: hidden; /* 내용이 부모 요소를 넘지 않도록 */
+}
+
+.bottomscrollbox {
+  width: 100%;
+}
+
+.scrolls {
+  display: flex;
+  animation: scrolls 20s linear infinite; /* 애니메이션을 추가 */
+}
+
+@keyframes scrolls {
+  0% {
+    transform: translateX(0); /* 애니메이션 시작 위치 */
+  }
+  100% {
+    transform: translateX(
+      -100%
+    ); /* 애니메이션 끝 위치, 두 번째 세트를 추가했으므로 -50%로 설정 */
   }
 }
