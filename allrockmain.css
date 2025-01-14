@@ -100,6 +100,11 @@ body {
   margin-left: auto;
 }
 
+@media screen and (max-width: 480px) {
+  .my_navbar_links {
+    display: none;
+  }
+}
 /* 상단 메뉴들 리스트 */
 
 ul,
@@ -402,7 +407,6 @@ a {
   img {
     width: 100%;
     aspect-ratio: 4/3;
-
     object-fit: cover;
   }
 }
@@ -536,7 +540,6 @@ a {
 }
 
 /* Dot Navigation */
-/* Dot Navigation (점 컨테이너) */
 .dot_navigation {
   position: absolute; /* 슬라이더 내부에 배치 */
   bottom: 15px; /* 하단에서의 간격 */
@@ -561,6 +564,7 @@ a {
 .dot_navigation .dot.active {
   background-color: rgba(255, 255, 255, 1); /* 활성화된 점 색상 */
 }
+
 .my_carousel {
   position: relative; /* 점의 절대 위치 기준 */
   overflow: hidden; /* 이미지 내부로 점을 제한 */

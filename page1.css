@@ -160,6 +160,11 @@ body {
   margin-left: auto;
 }
 
+@media screen and (max-width: 480px) {
+  .my_navbar_links {
+    display: none;
+  }
+}
 /* 상단 메뉴들 리스트 */
 
 ul,
@@ -820,8 +825,6 @@ a {
     transform: translateX(0); /* 애니메이션 시작 위치 */
   }
   100% {
-    transform: translateX(
-      -100%
-    ); /* 애니메이션 끝 위치, 두 번째 세트를 추가했으므로 -50%로 설정 */
+    transform: translateX(-100%);
   }
 }
