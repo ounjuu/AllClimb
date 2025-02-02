@@ -90,10 +90,7 @@ const returnData = (dataType) => {
 // 해더 값 받아오는 함수
 const moveHeader = (type) => {
   move = type; // 현재 선택된 카테고리 업데이트
-
   container.innerHTML = ""; // 기존 콘텐츠 초기화
-
-  // 여기
 };
 moveHeader("전체"); // 초기엔 "전체" 실행
 

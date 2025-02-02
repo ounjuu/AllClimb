@@ -694,7 +694,7 @@ a {
   padding-bottom: 100px;
   padding-right: 100px;
   padding-top: 260px;
-  font-weight: normal; /* 글씨 두께 */
+  font-weight: bolder; /* 글씨 두께 */
   letter-spacing: 2px;
 }
 
