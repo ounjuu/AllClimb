@@ -24,7 +24,7 @@
 <br/><br/>
 
 ## :hammer: 주요기능
-### 1. 메인 페이지
+### 1. 메인 페이지 - 1페이지
 #### :star: 슬라이드 - js <br/>
 <img width="100%" alt="image" src="https://github.com/user-attachments/assets/dc15f3ec-a406-4b60-b8c9-70da7c4738f9" />
 <br/>
@@ -41,15 +41,11 @@
 ##### (3) 각 이미지 크기는 grid로 한 줄에 3개씩 넣어줌 (각 이미지의 비율은 4/3으로 넣어서 반응형까지 고려하여 넣어줌)
 <br/>
 
-#### :star: hover시 확대 - CSS <br/>
+#### :star: hover시 이미지 확대 - CSS <br/>
 
-###  2. ABOUT 페이지
-
-
-
+###  2. ABOUT 페이지 - 2페이지
 #### :star: 스크롤 시 이미지 겹쳐지기 - CSS - sticky <br/>
 <img width="100%" alt="image" src="https://github.com/user-attachments/assets/67d78129-9752-4430-8b1d-c8366d9385df" /><br/>
-
 
 #### :star: 이미지 반복 - 무한으로 흘러가는 효과 <br/>
 
@@ -57,9 +53,9 @@
 <br/><br/>
 
 ## :hammer: 향후 계획
-#### :star: 커뮤니티 활성화 <br/>
-#### :star: 지도 기능 추가 <br/>
-#### :star: 외국인 사용자 지원 <br/>
-#### :star: 파트너십 확장 <br/>
-#### :star: SHOP 추가 <br/>
-###### :point_right: 하단 배너 광고, 판매 수수료, 홍보 수수료 -> 수익성 확보 <br/><br/><br/>
+###### - 커뮤니티 활성화 <br/>
+###### - 지도 기능 추가 <br/>
+###### - 외국인 사용자 지원 <br/>
+###### - 파트너십 확장 <br/>
+###### - SHOP 추가 <br/>
+###### :point_right: 하단 배너 광고, 판매 수수료, 홍보 수수료 -> :star: 수익성 확보 <br/><br/><br/>
