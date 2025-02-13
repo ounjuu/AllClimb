@@ -1,7 +1,7 @@
 
 # :climbing_woman: 클라이밍 정보 사이트 ALLROCK README
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/f10c62a0-d386-4844-bfa8-641f7e960f0a" alt="mainpageimage" />
+  <img width="861" alt="image" src="https://github.com/user-attachments/assets/2ba227bf-0bd8-4f64-9b53-f379a6af1638" />=
 </div>
 
 ## :page_facing_up: 프로젝트 소개
