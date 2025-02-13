@@ -246,7 +246,6 @@ a {
 }
 
 /* 반응형 스타일 */
-/* 반응형 스타일 */
 @media screen and (max-width: 768px) {
   .my_navbar {
     flex-direction: row; /* 가로 정렬 유지 */
