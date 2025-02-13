@@ -48,6 +48,8 @@
 
 
 #### :star: 스크롤 시 이미지 겹쳐지기 - CSS - sticky <br/>
+<img width="100%" alt="image" src="https://github.com/user-attachments/assets/67d78129-9752-4430-8b1d-c8366d9385df" /><br/>
+
 
 #### :star: 이미지 반복 - 무한으로 흘러가는 효과 <br/>
 
