@@ -1,7 +1,8 @@
 
 # :climbing_woman: 클라이밍 정보 사이트 ALLROCK README
 <div align="center">
-  <img width="861" alt="image" src="https://github.com/user-attachments/assets/2ba227bf-0bd8-4f64-9b53-f379a6af1638" />=
+  <img width="100%" alt="image" src="https://github.com/user-attachments/assets/67d78129-9752-4430-8b1d-c8366d9385df" /><br/><br/><br/>
+  <img width="100%" alt="image" src="https://github.com/user-attachments/assets/2ba227bf-0bd8-4f64-9b53-f379a6af1638" />
 </div>
 
 ## :page_facing_up: 프로젝트 소개
@@ -45,11 +46,23 @@
 
 ###  2. ABOUT 페이지 - 2페이지
 <img width="100%" alt="image" src="https://github.com/user-attachments/assets/67d78129-9752-4430-8b1d-c8366d9385df" /><br/>
-#### :star: 스크롤 시 이미지 겹쳐지기 - CSS - sticky <br/>
+
+#### :star: 스크롤 시 이미지 겹쳐지면서 흐릿해지는 효과 - CSS - sticky <br/>
+
+##### (1) 부모 요소 안에 이미지들 넣고 position : sticky 사용
+##### (2) scroll 이벤트로 scrollTop 값 받아와서 높이에 따라 투명도 조절
+##### => 연립방정식 사용 ex. 1 = a * 700 + b, 0.9 = a * 1150 + b => a와 b값을 구하여 높이에 따라 투명도 조절하여 줌
+##### => ex. let y = -0.0016 * scrollHeight + 4.7472; / document.querySelector(".image").style.opacity = y;
+
 
 #### :star: 이미지 반복 - 무한으로 흘러가는 효과 <br/>
+##### (1) @keyframes 사용하여 애니메이션 효과 줌
+##### (2) 한 번만 흘러가면 끊기는 것처럼 보여서 이미지를 두 번 반복하여 사용
 
 #### :star: 반응형 <br/>
+##### (1) 모든 페이지에 반응형 적용
+<img width="45%" height="450px" alt="image" src="https://github.com/user-attachments/assets/9eb324d2-c643-4092-9f93-4bdb28892b00" />
+<img width="45%" height="450px" alt="image" src="https://github.com/user-attachments/assets/acb90712-6616-4ac7-bda2-33f9c52fabb2" />
 <br/><br/>
 
 ## :hammer: 향후 계획
