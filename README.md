@@ -59,7 +59,7 @@
 ##### (2) 한 번만 흘러가면 끊기는 것처럼 보여서 이미지를 두 번 반복하여 사용<br/><br/>
 
 #### ✅ 반응형 <br/>
-##### (1) 모든 페이지에 반응형 적용
+##### - 모든 페이지에 반응형 적용
 <img width="45%" height="450px" alt="image" src="https://github.com/user-attachments/assets/9eb324d2-c643-4092-9f93-4bdb28892b00" />
 <img width="45%" height="450px" alt="image" src="https://github.com/user-attachments/assets/acb90712-6616-4ac7-bda2-33f9c52fabb2" />
 <br/><br/>
